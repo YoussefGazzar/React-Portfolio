@@ -1,12 +1,27 @@
 import './App.css';
-import './components/container/CounterContainer';
-import Container from './components/container/CounterContainer';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Counter from './views/CounterContainer';
+import Home from './views/Home';
+import About from './views/About';
+import Products from './views/Products';
+import Product from './views/Product';
+import Nav from './views/Nav'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <Container/>
-    </div>
+    <>
+    <BrowserRouter>
+    <Nav/>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/products' element={<Products/>}/>
+        <Route path='/products/:id' element={<Product/>}/>
+        <Route path='/counter' element={<Counter/>}/>
+      </Routes>
+    </BrowserRouter>
+    </>
   );
 }
 

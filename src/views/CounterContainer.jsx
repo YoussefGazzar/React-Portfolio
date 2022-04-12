@@ -1,7 +1,6 @@
-import Actions from '../actions/CounterActions'
-import Counter from '../counter/Counter'
+import Actions from '../components/CounterActions'
+import Counter from '../components/Counter'
 import { useState } from 'react'
-import './CounterContainer.css'
 
 const Container = ()=>{
     const [counter, setCounter] = useState(0)
@@ -14,12 +13,13 @@ const Container = ()=>{
     }
 
     return (
-        <div>
-            <div className='counter'>
+        <div className='container d-flex flex-column align-items-center mt-5'>
+            <div className='mb-4 fs-1 fw-bolder'>
                 <Counter counter={counter}/>
             </div>
-            <div className='actions'>
+            <div>
                 <Actions increase={increase} decrease={decrease}/>
+
             </div>
         </div>
     )
