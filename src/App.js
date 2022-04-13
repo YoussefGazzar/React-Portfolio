@@ -6,6 +6,7 @@ import About from './views/About';
 import Products from './views/Products';
 import Product from './views/Product';
 import Nav from './views/Nav'
+import Todo from './views/Todo'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/products' element={<Products/>}/>
         <Route path='/products/:id' element={<Product/>}/>
         <Route path='/counter' element={<Counter/>}/>
+        <Route path='/todo' element={<Todo/>}/>
       </Routes>
     </BrowserRouter>
     </>
