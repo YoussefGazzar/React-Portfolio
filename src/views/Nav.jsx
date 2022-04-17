@@ -19,6 +19,9 @@ const Nav = () => {
             <li>
                 <Link to='/todo'>Todo</Link>
             </li>
+            <li>
+                <Link to='/form'>Form</Link>
+            </li>
         </ul>
     </div>
 }

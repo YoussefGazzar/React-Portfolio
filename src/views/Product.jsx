@@ -14,9 +14,8 @@ const Product = () => {
 
     useEffect(() => {
       fetchProduct()
-    }, [])
+    })
     
-
     return <div className="container d-flex justify-content-evenly border p-3">
         <img className="w-25" src={product.image} alt={product.title} />
         <div className="col-6">
